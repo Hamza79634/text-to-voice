@@ -1,1 +1,3 @@
-# text-to-voice
+# text to voive 
+# shortcut commands don't miss
+☪🤩🥰
