@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    top: 32px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    z-index: -1;
+    transition: transform 0.5s ease;
+    transform: rotateY(0deg);
+}
+
+.container:hover::before {
+    transform: rotateY(10deg);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6f61;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:active {
+    background: #e55b52;
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: 2px solid #ff6f61;
+    outline-offset: 4px;
+}
+
+button:hover {
+    background: #e55b52;
+}
+
+select, input {
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+
+
+.controls label {
+    margin-right: 5px;
+}
+
+.controls input[type="range"] {
+    width: 100%;
+}
+.shortcuts-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #333;
+color: white;
+padding: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+text-align: center;
+}
+
+.shortcuts-container h2 {
+margin: 0;
+font-size: 20px;
+}
+
+.shortcuts-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 2px;
+padding: 0;
+margin: 10px 0 0;
+}
+
+.shortcut-item {
+background: #444;
+padding: 10px;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.shortcut-item strong {
+font-weight: bold;
+}

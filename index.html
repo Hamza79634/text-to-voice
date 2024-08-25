@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech and Speech-to-Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text-to-Speech and Speech-to-Text</h1>
+        <div class="shortcuts-container">
+            <h2>Keyboard Shortcuts</h2>
+            <div class="shortcuts-grid">
+                <div class="shortcut-item">
+                    <strong>Spacebar:</strong> Toggle Speaking
+                </div>
+                <div class="shortcut-item">
+                    <strong>S:</strong> Start Voice Input
+                </div>
+                <div class="shortcut-item">
+                    <strong>E:</strong> Stop Voice Input
+                </div>
+                <div class="shortcut-item">
+                    <strong>P:</strong> Pause Speech
+                </div>
+                <div class="shortcut-item">
+                    <strong>R:</strong> Resume Speech
+                </div>
+                <div class="shortcut-item">
+                    <strong>X:</strong> Stop Speech
+                </div>
+            </div>
+        </div>
+        
+        
+        <textarea id="text-input" placeholder="Speak or type here..."></textarea>
+        <div class="controls">
+            <button id="voice-input-button">Start Voice writing</button>
+            <button id="stop-voice-input-button">Stop Voice writing</button>
+            <button id="speak-button">Speak written Text</button>
+            <button id="pause-button">Pause</button>
+            <button id="resume-button">Resume</button>
+            <button id="stop-button">Stop</button>
+           
+        </div>
+        <label for="voice-select">Choose voice:</label>
+        <select id="voice-select"></select>
+        <div class="controls">
+            <label for="volume-control">Volume:</label>
+            <input id="volume-control" type="range" min="0" max="1" step="0.1" value="1">
+            <label for="rate-control">Rate:</label>
+            <input id="rate-control" type="range" min="0.1" max="2" step="0.1" value="1">
+            <label for="pitch-control">Pitch:</label>
+            <input id="pitch-control" type="range" min="0" max="2" step="0.1" value="1">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
